@@ -1,0 +1,34 @@
+{
+  "denylist_patterns": [
+    "how to (build|make) (a )?(bomb|explosive)",
+    "synthesize (ricin|sarin|vx)",
+    "credit card (numbers|dump)",
+    "child (porn|sexual abuse)"
+  ],
+  "injection_patterns": [
+    "ignore (all )?(previous|prior|above) instructions",
+    "disregard (the )?(system|safety) prompt",
+    "you are now (dan|unrestricted)",
+    "developer mode",
+    "pretend (you have|to be) no (rules|restrictions)"
+  ],
+  "weights": {
+    "denylist_hit": 1.0,
+    "injection_hit": 0.7,
+    "fhe_model_weight": 0.3
+  },
+  "risk_threshold": 0.5,
+  "protocol": {
+    "max_nonce_age_seconds": 300,
+    "max_future_skew_seconds": 60
+  },
+  "transcript_max_entries": 500,
+  "fhe": {
+    "feature_dim": 128,
+    "poly_modulus_degree": 8192,
+    "scale_bits": 40,
+    "coeff_mod_bit_sizes": [60, 40, 40, 60],
+    "model_seed": 1234,
+    "score_amplification": 4.0
+  }
+}

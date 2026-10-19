@@ -1,0 +1,20 @@
+{
+  "name": "zk_safeguard",
+  "description": "Privacy-preserving prompt-safety check with encrypted scoring (TenSEAL CKKS) and a verifiable proof-of-decision prototype",
+  "language": "python",
+  "checks": [
+    {
+      "name": "unit_tests",
+      "cmd": "python -m pytest tests -q",
+      "timeout_sec": 900
+    },
+    {
+      "name": "smoke_test",
+      "cmd": "python scripts/smoke_test.py",
+      "timeout_sec": 600
+    }
+  ],
+  "docker": {
+    "enabled": true
+  }
+}
